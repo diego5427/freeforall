@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?911bc688a5e5b0731b3641a473af45ab") format("truetype"),
+url("./flaticon.woff?911bc688a5e5b0731b3641a473af45ab") format("woff"),
+url("./flaticon.woff2?911bc688a5e5b0731b3641a473af45ab") format("woff2"),
+url("./flaticon.eot?911bc688a5e5b0731b3641a473af45ab#iefix") format("embedded-opentype"),
+url("./flaticon.svg?911bc688a5e5b0731b3641a473af45ab#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "grabadora-de-voz": "\f101",
+    "reproductor-de-video": "\f102",
+    "mapa": "\f103",
+    "alarma": "\f104",
+);
+
+.flaticon-grabadora-de-voz:before {
+    content: map-get($flaticon-map, "grabadora-de-voz");
+}
+.flaticon-reproductor-de-video:before {
+    content: map-get($flaticon-map, "reproductor-de-video");
+}
+.flaticon-mapa:before {
+    content: map-get($flaticon-map, "mapa");
+}
+.flaticon-alarma:before {
+    content: map-get($flaticon-map, "alarma");
+}
